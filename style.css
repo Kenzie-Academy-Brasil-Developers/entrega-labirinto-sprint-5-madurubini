@@ -1,0 +1,67 @@
+body{
+    max-width: 95vw;
+    text-align: center;
+    padding: 5px;
+}
+
+#jogo {
+    margin: 0 auto;
+   
+}
+.parede {
+    width: 20px;
+    height: 20px;
+    background-color: #e696cb;
+    background-image: url(media/siri.png);
+    background-size: cover;
+    background-position: center;
+
+ 
+}
+
+.espaco {
+    width: 20px;
+    height: 20px;
+    background-image: url(media/praia.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.jogador {
+    width: 20px;
+    height: 20px;
+    background-image: url(media/bobesponja.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    bottom: 100px;
+    left: 0px;
+    animation-duration: 100ms;
+
+}
+
+.partida{
+    width: 20px;
+    height: 20px;
+    background-image: url(media/Casa_abacaxi.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.chegada{
+    width: 20px;
+    height: 20px;
+    background-image: url(media/siricascudo.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+#jogo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 420px;
+    /* height: 150px; */
+    position: relative;
+}
