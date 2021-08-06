@@ -1,3 +1,4 @@
+
 const map = [
     "WWWWWWWWWWWWWWWWWWWWW",
     "W   W     W     W W W",
@@ -58,6 +59,7 @@ function mostraLabirinto(){
            }
        }
    }
+            hide()
 
 }
 
@@ -71,8 +73,21 @@ let ultimaPosicaoLeft = 0
 let posicao
 let ultimoElemento
 let buttonStart = document.getElementById("start")
+let instrucoes = document.getElementById("box")
+let somPronto = document.getElementById("somInicio")
+let somVitoria = document.getElementById("somDeVitoria")
+
+
+
+
 
 buttonStart.addEventListener("click", mostraLabirinto)
+buttonStart.addEventListener("click" ,function(){
+    somPronto.currentTime = 2
+    somPronto.volume = 0.2
+    somPronto.play()
+    
+})
 
 document.addEventListener('keydown', (event)=> {
     const keyName = event.key;
@@ -133,8 +148,26 @@ document.addEventListener('keydown', (event)=> {
  
 function condicaoVitoria(){
     if(posicaoItemMapa === "F"){
-        alert("Você venceu")
+        let msg = document.getElementById('mensagem')
+        msg.innerHTML = "Parabéns você venceu"
+        msg.classList.add("mensagem")
+        jogo.appendChild(msg)
+        somVitoria.volume = 0.2
+        somVitoria.play()
+        let buttonReset = document.createElement('button')
+        buttonReset.innerHTML = "Reset"
+        buttonReset.classList.add("button")
+        jogo.appendChild(buttonReset)
+        buttonReset.addEventListener("click", function(){
+            location.reload()
+        })
     }
+}
+
+function hide(){
+    instrucoes.classList.add("hidden")
+    buttonStart.classList.add("hidden")
+    jogador.classList.remove("hidden")
 }
 
 

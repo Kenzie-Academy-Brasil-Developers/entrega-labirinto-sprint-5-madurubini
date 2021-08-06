@@ -1,13 +1,35 @@
 body{
-    max-width: 95vw;
+    max-width: 90vw;
     text-align: center;
     padding: 5px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    background-image: url(media/background.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+    color: white;   
+    margin: 0 auto;
 }
 
-#jogo {
-    margin: 0 auto;
-   
+#box{
+    text-align: center;     
 }
+
+ 
+h1  {
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+ p{
+    margin: 10px 0;
+}
+
+
 .parede {
     width: 20px;
     height: 20px;
@@ -15,8 +37,6 @@ body{
     background-image: url(media/siri.png);
     background-size: cover;
     background-position: center;
-
- 
 }
 
 .espaco {
@@ -25,8 +45,8 @@ body{
     background-image: url(media/praia.jpg);
     background-size: cover;
     background-position: center;
-
 }
+
 .jogador {
     width: 20px;
     height: 20px;
@@ -36,8 +56,6 @@ body{
     position: absolute;
     bottom: 100px;
     left: 0px;
-    animation-duration: 100ms;
-
 }
 
 .partida{
@@ -46,7 +64,6 @@ body{
     background-image: url(media/Casa_abacaxi.jpg);
     background-size: cover;
     background-position: center;
-
 }
 
 .chegada{
@@ -55,13 +72,50 @@ body{
     background-image: url(media/siricascudo.jpg);
     background-size: cover;
     background-position: center;
-
 }
 
 #jogo {
     display: flex;
     flex-wrap: wrap;
     width: 420px;
-    /* height: 150px; */
     position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.button {
+    background-color: #4977DC;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    width: 100px;
+    height: 33px;
+    border-radius: 5px;
+    border: 1px dotted black;
+    margin: 10px 0 ;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #678bd8;
+
+}
+
+.mensagem {
+    border: 1px solid black;
+    position: absolute;
+    background-image: url(media/fogos.gif);
+    width: 250px;
+    height: 100px;
+    bottom: 100px;
+    right: 0px;
+    padding: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color :#FFF;
+    font-weight: bold;
 }
